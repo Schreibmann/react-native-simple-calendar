@@ -1,0 +1,54 @@
+{
+  "name": "react-native-simple-calendar",
+  "version": "1.0.0",
+  "description": "Simple calendar for react native",
+  "main": "lib/index.js",
+  "keywords": [
+    "react-native",
+    "react",
+    "calendar",
+    "date",
+    "picker",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schreibmann/react-native-simple-calendar.git"
+  },
+  "author": "Schreibmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schreibmann/react-native-simple-calendar/issues"
+  },
+  "homepage": "https://github.com/Schreibmann/react-native-simple-calendar#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./lib && tsc"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "^12.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "typescript": "4.0.3",
+    "@babel/core": "^7.13.16",
+    "@babel/runtime": "^7.13.17",
+    "@svgr/webpack": "^5.5.0",
+    "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-react-native-web": "^0.16.0",
+    "eslint": "^7.24.0",
+    "react-native-svg-transformer": "^0.14.3"
+  }
+}
