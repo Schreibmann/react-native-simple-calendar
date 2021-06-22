@@ -24,8 +24,8 @@ const globalLocaleData = dayjs.localeData();
 const weekdaysShort = globalLocaleData.weekdaysShort();
 
 interface CalendarProps extends ViewProps {
-  date?: Dayjs;
   setDate: (date: Dayjs) => void;
+  date?: Dayjs;
   containerStyle?: ViewStyle;
   backgroundColor?: ColorValue;
   selectedDayColor?: ColorValue;

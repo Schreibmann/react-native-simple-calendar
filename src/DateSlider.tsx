@@ -26,10 +26,10 @@ interface DateSliderProps extends ViewProps {
 const DateSlider = ({
   date = dayjs(),
   setDate,
-  type,
+  type = 'month',
+  format = 'MMMM',
   iconProps,
   textStyle,
-  format,
   style,
   ...rest
 }: DateSliderProps) => {
