@@ -13,7 +13,7 @@ const config = {
 
 interface DateSliderProps extends GestureRecognizerProps {
   setDate: (date: Dayjs) => void;
-  date?: Dayjs;
+  date: Dayjs;
   type: 'day' | 'month' | 'year';
   format: string;
   iconProps?: SvgProps;
