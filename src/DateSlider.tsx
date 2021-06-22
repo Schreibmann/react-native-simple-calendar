@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import dayjs, { Dayjs } from 'dayjs';
 import { SvgProps } from 'react-native-svg';
-import ArrowLeft2Icon from './assets/arrorLeft.svg';
+import ArrowLeft2Icon from './assets/arrowLeft.svg';
 import ArrowRight2Icon from './assets/arrowRight.svg';
 
 interface DateSliderProps extends ViewProps {

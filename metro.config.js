@@ -1,4 +1,4 @@
-const { getDefaultConfig } = require('metro-config');
+import { getDefaultConfig } from 'metro-config';
 
 /** @typedef {ReturnType<import('metro-config/src/defaults/index.js')['getDefaultValues']>} MetroConfig */
 /** @typedef {Partial<{[K in keyof MetroConfig]: Partial<MetroConfig[K]>}>} PartialMetroConfig */
@@ -12,12 +12,12 @@ module.exports = (async () => {
   const config = {
     transformer: {
       babelTransformerPath: require.resolve('react-native-svg-transformer'),
-      getTransformOptions: async () => ({
+      /*getTransformOptions: async () => ({
         transform: {
           experimentalImportSupport: false,
           inlineRequires: true,
         },
-      }),
+      }),*/
     },
     resolver: {
       assetExts: assetExts.filter((ext) => ext !== 'svg'),
