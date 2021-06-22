@@ -1,21 +1,19 @@
-import React, { useCallback, useMemo, memo } from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Text,
-  ViewStyle,
-  TextStyle,
-  ViewProps,
-} from 'react-native';
+import React, { useCallback, useMemo } from 'react';
+import { StyleSheet, TouchableOpacity, Text, ViewStyle, TextStyle } from 'react-native';
 import dayjs, { Dayjs } from 'dayjs';
 import { SvgProps } from 'react-native-svg';
 import ArrowLeft2Icon from './assets/arrowLeft.svg';
 import ArrowRight2Icon from './assets/arrowRight.svg';
+import GestureRecognizer, { GestureRecognizerProps } from 'react-native-swipe-gestures';
 
-interface DateSliderProps extends ViewProps {
-  date?: Dayjs;
+const config = {
+  velocityThreshold: 0.3,
+  directionalOffsetThreshold: 80,
+};
+
+interface DateSliderProps extends GestureRecognizerProps {
   setDate: (date: Dayjs) => void;
+  date?: Dayjs;
   type: 'day' | 'month' | 'year';
   format: string;
   iconProps?: SvgProps;
@@ -23,7 +21,7 @@ interface DateSliderProps extends ViewProps {
   style?: ViewStyle;
 }
 
-const DateSlider = ({
+const DateSlider: React.FC<DateSliderProps> = ({
   date = dayjs(),
   setDate,
   type = 'month',
@@ -40,6 +38,7 @@ const DateSlider = ({
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
+          backgroundColor: 'transparent',
           ...style,
         },
         iconContainer: {
@@ -73,7 +72,12 @@ const DateSlider = ({
   }, [date, setDate, type]);
 
   return (
-    <View style={styles.container} {...rest}>
+    <GestureRecognizer
+      style={styles.container}
+      onSwipeLeft={onPrev}
+      onSwipeRight={onNext}
+      config={config}
+      {...rest}>
       <TouchableOpacity onPress={onPrev} style={styles.iconContainer}>
         <ArrowLeft2Icon {...styles.iconProps} {...iconProps} />
       </TouchableOpacity>
@@ -83,8 +87,8 @@ const DateSlider = ({
       <TouchableOpacity onPress={onNext} style={styles.iconContainer}>
         <ArrowRight2Icon {...styles.iconProps} {...iconProps} />
       </TouchableOpacity>
-    </View>
+    </GestureRecognizer>
   );
 };
 
-export default memo(DateSlider);
+export default DateSlider;

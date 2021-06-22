@@ -10,9 +10,14 @@ const App = () => {
     <View>
       <StatusBar />
       <Text>Calendar example</Text>
-      <DateSlider type="day" format="D MMM YYYY" />
-      <DateSlider type="month" format="MMMM" />
-      <DateSlider type="year" format="YYYY" />
+      <DateSlider
+        date={date}
+        setDate={setDate}
+        type="day"
+        format="D MMM YYYY"
+      />
+      <DateSlider date={date} setDate={setDate} type="month" format="MMMM" />
+      <DateSlider date={date} setDate={setDate} type="year" format="YYYY" />
       <Calendar date={date} setDate={setDate} />
     </View>
   );
