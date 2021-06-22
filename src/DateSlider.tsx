@@ -9,8 +9,9 @@ import {
   ViewProps,
 } from 'react-native';
 import dayjs, { Dayjs } from 'dayjs';
-import { ArrowLeft2Icon, ArrowRight2Icon } from './assets/svg';
 import { SvgProps } from 'react-native-svg';
+import ArrowLeft2Icon from './assets/arrorLeft.svg';
+import ArrowRight2Icon from './assets/arrowRight.svg';
 
 interface DateSliderProps extends ViewProps {
   date?: Dayjs;
@@ -60,7 +61,7 @@ const DateSlider = ({
           ...textStyle,
         },
       }),
-    [],
+    [style, textStyle],
   );
 
   const onPrev = useCallback(() => {

@@ -146,7 +146,16 @@ const Calendar: React.FC<CalendarProps> = ({
         },
         emptyLine: { width: '100%', height: 32 },
       }),
-    [],
+    [
+      backgroundColor,
+      containerStyle,
+      isWeb,
+      notSelectedMonthColor,
+      selectedDayColor,
+      selectedMonthColor,
+      todayColor,
+      weekdayColor,
+    ],
   );
 
   const [month, setMonth] = useState(date);
@@ -224,6 +233,7 @@ const Calendar: React.FC<CalendarProps> = ({
           date={month}
           setDate={setMonth}
           type={'month'}
+          // eslint-disable-next-line react-native/no-inline-styles
           textStyle={{ color: '#ffffff' }}
           iconProps={{ color: '#ffffff' }}
         />

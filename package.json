@@ -2,7 +2,8 @@
   "name": "react-native-simple-calendar",
   "version": "1.0.0",
   "description": "Simple calendar for react native",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "react-native",
     "react",
@@ -23,23 +24,26 @@
   "homepage": "https://github.com/Schreibmann/react-native-simple-calendar#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./lib && tsc"
+    "build": "tsc"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
   "dependencies": {
+    "@types/react-test-renderer": "^17.0.1",
     "dayjs": "^1.10.4",
     "react": "*",
     "react-native": "*",
-    "react-native-svg": "^12.1.1"
+    "react-native-svg": "^12.1.1",
+    "react-native-typescript-transformer": "^1.2.13"
   },
   "devDependencies": {
     "@types/react": "*",
     "@types/react-native": "*",
     "@react-native-community/eslint-config": "^3.0.0",
     "metro-react-native-babel-preset": "^0.66.0",
+    "@types/react-test-renderer": "^17.0.0",
     "typescript": "4.0.3",
     "@babel/core": "^7.13.16",
     "@babel/runtime": "^7.13.17",
