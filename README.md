@@ -12,7 +12,7 @@ React Native calendar component and date slider
 
 ```javascript
 import React, {useState} from 'react';
-import {StatusBar, View} from 'react-native';
+import {Text, View} from 'react-native';
 import {Calendar, DateSlider} from '../dist';
 import dayjs from 'dayjs';
 
@@ -20,15 +20,29 @@ const App = () => {
   const [date, setDate] = useState(dayjs());
 
   return (
-    <View>
+    <View style={styles.appContainer}>
+      <Text style={styles.text}>Swipe or tap to change date</Text>
       <DateSlider
+        style={styles.dateSliderContainer}
         date={date}
         setDate={setDate}
         type="day"
         format="D MMM YYYY"
       />
-      <DateSlider date={date} setDate={setDate} type="month" format="MMMM" />
-      <DateSlider date={date} setDate={setDate} type="year" format="YYYY" />
+      <DateSlider
+        style={styles.dateSliderContainer}
+        date={date}
+        setDate={setDate}
+        type="month"
+        format="MMMM"
+      />
+      <DateSlider
+        style={styles.dateSliderContainer}
+        date={date}
+        setDate={setDate}
+        type="year"
+        format="YYYY"
+      />
       <Calendar date={date} setDate={setDate} />
     </View>
   );

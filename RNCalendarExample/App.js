@@ -11,7 +11,7 @@ const App = () => {
       <StatusBar />
       <Text style={styles.text}>Swipe or tap to change date</Text>
       <DateSlider
-        locale="ru"
+        //locale="ru"
         style={styles.dateSliderContainer}
         date={date}
         setDate={setDate}
@@ -19,7 +19,7 @@ const App = () => {
         format="D MMM YYYY"
       />
       <DateSlider
-        locale="de"
+        //locale="de"
         style={styles.dateSliderContainer}
         date={date}
         setDate={setDate}
