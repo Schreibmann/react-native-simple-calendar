@@ -4,6 +4,9 @@
   "description": "Simple calendar for react native",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react-native",
     "react",

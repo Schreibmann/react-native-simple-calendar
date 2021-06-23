@@ -4,13 +4,15 @@ React Native calendar component and date slider
 
 ## Installation
 
-`WIP`
+`npm i react-native-simple-calendar`
+
+![](screenshot.jpg)
 
 ## Usage
 
 ```javascript
 import React, {useState} from 'react';
-import {StatusBar, Text, View} from 'react-native';
+import {StatusBar, View} from 'react-native';
 import {Calendar, DateSlider} from '../dist';
 import dayjs from 'dayjs';
 
@@ -48,8 +50,8 @@ export default App;
 
 | Name      | Type          | Default    | Description  |
 | --------- |:-------------:| ---------- | ------------ |
-| date      | Dayjs type    | today date | Date value in dayjs lib format |
-| type      | string        | 'month'    | ('day' | 'month' | 'year')  |
+| date      | Dayjs         | today date | Date value in dayjs lib format |
+| type      | string        | 'month'    | 'day', 'month' or 'year' |
 | format    | string        | 'MMMM'     | Date format ([https://day.js.org/docs/en/display/format]) |
 | iconProps | SvgProps      | -          | Props of arrow icons (width, height, viewBox, preserveAspectRatio, color, title) |
 | textStyle | TextStyle     | -          | React native text style |

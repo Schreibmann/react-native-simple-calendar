@@ -16,6 +16,7 @@ interface DateSliderProps extends GestureRecognizerProps {
   date: Dayjs;
   type: 'day' | 'month' | 'year';
   format: string;
+  //locale?: string;
   iconProps?: SvgProps;
   textStyle?: TextStyle;
   style?: ViewStyle;
@@ -23,6 +24,7 @@ interface DateSliderProps extends GestureRecognizerProps {
 
 const DateSlider: React.FC<DateSliderProps> = ({
   date = dayjs(),
+  //locale = 'en',
   setDate,
   type = 'month',
   format = 'MMMM',
@@ -70,6 +72,17 @@ const DateSlider: React.FC<DateSliderProps> = ({
   const onNext = useCallback(() => {
     setDate(date.add(1, type));
   }, [date, setDate, type]);
+
+  /*useEffect(() => {
+    if (locale) {
+      try {
+        const importLocale = () => import(`dayjs/locale/${locale}`);
+        importLocale().then(() => dayjs.locale(locale));
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
+  }, [locale]);*/
 
   return (
     <GestureRecognizer
