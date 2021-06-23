@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "another-react-native-simple-calendar": "^1.0.1",
     "metro-config": "^0.66.0",
     "react": "17.0.1",
     "react-native": "0.64.2",

@@ -1,6 +1,6 @@
 {
   "name": "another-react-native-simple-calendar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple calendar for react native",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

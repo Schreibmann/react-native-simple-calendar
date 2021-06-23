@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {StatusBar, Text, View, StyleSheet} from 'react-native';
-import {Calendar, DateSlider} from '../dist';
+import {Calendar, DateSlider} from 'another-react-native-simple-calendar';
 import dayjs from 'dayjs';
 
 const App = () => {
@@ -11,7 +11,6 @@ const App = () => {
       <StatusBar />
       <Text style={styles.text}>Swipe or tap to change date</Text>
       <DateSlider
-        //locale="ru"
         style={styles.dateSliderContainer}
         date={date}
         setDate={setDate}
@@ -19,7 +18,6 @@ const App = () => {
         format="D MMM YYYY"
       />
       <DateSlider
-        //locale="de"
         style={styles.dateSliderContainer}
         date={date}
         setDate={setDate}
